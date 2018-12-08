@@ -1,0 +1,21 @@
+/**
+    覆盖antd控件原来的样式
+ */
+
+@import '~@/styles/var.scss';
+
+#app {
+    .ant-layout-header {
+        background-color: $color-dark;
+        padding: 0 25px;
+    }
+
+    .ant-layout-sider {
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+

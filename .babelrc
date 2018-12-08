@@ -1,0 +1,25 @@
+{
+    "presets": [
+        ["env", {
+            "modules": false,
+            "targets": {
+                "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+            }
+        }],
+        "stage-3",
+        "react"
+    ],
+    "plugins": [
+        "lodash",
+        "transform-runtime",
+        "transform-decorators-legacy",
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "style": true
+            }
+        ],
+        "syntax-dynamic-import"
+    ],
+}
