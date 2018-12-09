@@ -19,7 +19,6 @@ var config = {
         app: './main.js'
     },
     output: {
-        publicPath: '/',
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js'
     },
@@ -152,7 +151,6 @@ if (isProd) {
         mode: 'production',
         devtool: 'inline-source-map',
         output: {
-            publicPath: '/',
             filename: 'js/[name].[chunkhash:8].js',
             chunkFilename: 'js/[name].[chunkhash:8].js'
         },
