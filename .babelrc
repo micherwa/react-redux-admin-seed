@@ -13,13 +13,14 @@
         "lodash",
         "transform-runtime",
         "transform-decorators-legacy",
+        "syntax-dynamic-import",
+        "react-hot-loader/babel",
         [
             "import",
             {
                 "libraryName": "antd",
                 "style": true
             }
-        ],
-        "syntax-dynamic-import"
+        ]
     ],
 }

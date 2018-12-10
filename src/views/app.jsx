@@ -1,8 +1,6 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router';
-import Util from '@/utils';
-
+import { hot } from 'react-hot-loader';
 import Loadable from 'react-loadable';
 import MyLoading from '@/components/MyLoading';
 
@@ -29,4 +27,4 @@ class App extends React.Component {
     };
 }
 
-export default App;
+export default hot(module)(App);

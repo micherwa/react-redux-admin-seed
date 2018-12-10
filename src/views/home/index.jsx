@@ -59,7 +59,7 @@ class Home extends Component {
             <Layout className="home">
                 <Header className="c-white clearfix header">
                     <div className="pull-left f20 w210 text-center">
-                        Lilith 广告投放配置平台
+                        后台管理系统
                     </div>
                     <span className="pull-right avatar m-l-10 m-t-12">
                         <img className="img-responsive" src={ this.state.avatarUrl } />
