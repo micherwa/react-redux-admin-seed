@@ -23,12 +23,14 @@
         "url": "git+https://github.com/micherwa/react-redux-admin-antd.git"
     },
     "dependencies": {
+        "animate.css": "^3.7.0",
         "antd": "^3.10.9",
         "axios": "^0.18.0",
         "font-awesome": "^4.7.0",
         "history": "^4.7.2",
         "lodash": "^4.17.10",
         "moment": "^2.22.2",
+        "nprogress": "^0.2.0",
         "qs": "^6.6.0",
         "react": "^16.6.3",
         "react-dom": "^16.6.3",

@@ -6,6 +6,9 @@ import app from '@/views/app';
 import { Provider } from 'react-redux';
 import store from '@/store';
 
+import 'animate.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'nprogress/nprogress.css';
 import '@/styles/app.scss';
 
 // 监听state变化
