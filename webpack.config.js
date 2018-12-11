@@ -46,7 +46,7 @@ var config = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'fonts/[name].[hash:7].[ext]'
+                    name: 'css/fonts/[name].[hash:7].[ext]'
                 }
             },
             // 解决antd的样式按需加载的bug
