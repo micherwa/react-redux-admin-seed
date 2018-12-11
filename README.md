@@ -2,7 +2,7 @@
 
 本项目采用截止目前最新版的react16.6.3、react-router4.3.1、react-redux5.5.1、redux4.0.1，因为是后台管理系统，所以再配上antd3.10.9。
 
-webpack从零开始自定义构建，只有一个文件(webpack.config.js)，运行与打包的命令，与市面上的脚手架类似，参见pakage.json。
+webpack从零开始，自建了v4版本的webpack.config.js，运行与打包的命令，与市面上的脚手架类似，详见pakage.json。
 
 项目的由来，是因为公司项目的技术栈发生了变化，需要一个react的脚手架，能够让组员们迅速地进入开发阶段。
 在搭建的过程中，参考了许多网上的教程，当然最经典的，莫过于阮老师的 [React 技术栈系列教程](http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html)，非常全面。但很可惜，react的版本更新速度实在太快，而阮老师的技术栈完结时间在2016年9月23日，有些react的生命周期已经废弃，有些写法也已经不支持了。如果按照教程上的方法执行，会看到一些莫名的报错。
