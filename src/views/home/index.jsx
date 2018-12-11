@@ -82,7 +82,7 @@ class Home extends Component {
             <Layout className="home">
                 <Header className="c-white clearfix header">
                     <div className="pull-left f20 w210">
-                        后台管理系统
+                        后台管理系统 (React版)
                     </div>
                     <Dropdown overlay={ menu }>
                         <span className="pull-right avatar m-l-10 m-t-12 hand">
