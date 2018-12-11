@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { Redirect } from 'react-router';
 import Util from '@/utils';
+import './style.scss';
 
-class NoAuthMain extends React.Component {
+class LoginMain extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -12,16 +13,17 @@ class NoAuthMain extends React.Component {
     }
 
     componentDidMount () {
-        this.setToken();
+
     }
 
-    setToken () {
-        this.setState({ token: Util.getLocalItem('token') });
-    }
-
-    handleClick () {
-        Util.setLocalItem('token', '1');
-        this.setToken();
+    handleSubmit (e) {
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                this.setState({ token: values.username });
+                Util.setLocalItem('token', values.username);
+            }
+        });
     }
 
     render () {
@@ -30,13 +32,42 @@ class NoAuthMain extends React.Component {
             return <Redirect to={from} />;
         }
 
+        const { getFieldDecorator } = this.props.form;
         return (
-            <div className="text-center" style={{ paddingTop: '100px' }}>
-                <h2>暂无权限（目前用token失效模拟，跳转至本界面）</h2><br/>
-                <Button type="primary" onClick={this.handleClick.bind(this)}>临时登录入口，之后会去掉</Button>
+            <div className="login-container">
+                <Form className="login-form" onSubmit={this.handleSubmit.bind(this)}>
+                    <Form.Item className="title text-center bold">
+                        系统登录
+                    </Form.Item>
+                    <Form.Item>
+                        {getFieldDecorator('username', {
+                            rules: [{ required: true, message: '请输入用户名' }],
+                            initialValue: 'admin'
+                        })(
+                            <Input
+                                placeholder="用户名" size="large"
+                                prefix={<i className="fa fa-user" style={{ color: '#889aa4' }} />}>
+                            </Input>
+                        )}
+                    </Form.Item>
+                    <Form.Item>
+                        {getFieldDecorator('password', {
+                            rules: [{ required: true, message: '请输入密码' }],
+                            initialValue: 'password'
+                        })(
+                            <Input
+                                placeholder="密码" size="large" type="password"
+                                prefix={<i className="fa fa-lock" style={{ color: '#889aa4' }} />}>
+                            </Input>
+                        )}
+                    </Form.Item>
+                    <Form.Item>
+                        <Button type="primary" size="large" htmlType="submit" style={{ width: '100%'}}>登录</Button>
+                    </Form.Item>
+                </Form>
             </div>
         );
     };
 }
 
-export default NoAuthMain;
+export default Form.create()(LoginMain);

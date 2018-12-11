@@ -82,7 +82,8 @@ var config = {
         }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en|zh/),
         new LodashModuleReplacementPlugin({
-            'shorthands': true
+            'shorthands': true,
+            'paths': true
         })
     ],
     performance: {

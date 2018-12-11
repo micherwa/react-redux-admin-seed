@@ -17,7 +17,7 @@ class Home extends Component {
             mainHeight: 0,
             menuItemkey: '',
             avatarUrl: '',
-            userName: '用户名',
+            userName: Util.getLocalItem('token'),
             unlisten: null,
             token: Util.getLocalItem('token')
         };
