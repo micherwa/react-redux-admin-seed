@@ -3,7 +3,7 @@ import Loadable from 'react-loadable';
 import MyLoading from '@/components/MyLoading';
 
 const AsyncDashboardMain = Loadable({
-    loader: () => import('@/views/dashboard/main'),
+    loader: () => import('@/views/dashboard'),
     loading: () => <MyLoading />
 });
 

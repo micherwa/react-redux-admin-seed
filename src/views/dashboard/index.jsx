@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { getDashboardInfo } from '@/store/dashboard/action';
 import { Button } from 'antd';
 import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
 
 @connect(({ dashboardData }) => ({ dashboardInfo: dashboardData.info }), { getDashboardInfo })
 
