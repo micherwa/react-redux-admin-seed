@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "animate.css": "^3.7.0",
-        "antd": "^3.10.9",
+        "antd": "^3.11.2",
         "axios": "^0.18.0",
         "font-awesome": "^4.7.0",
         "history": "^4.7.2",
